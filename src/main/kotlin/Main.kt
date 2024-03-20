@@ -2,6 +2,14 @@ fun main() {
     println(sum(45, 34))
     greet("Mary")
     println( isAdult(17))
+
+
+    /*Did this on March 22*/
+    text("123")
+    reverseString("akirachix")
+    words(arrayOf(12,23,24,35,36))
+    /*println(text("123"))
+    println(reverseString("akirachix"))*/
 }
 
 //Create a function sum that takes two parameters and returns their sum.
@@ -27,4 +35,22 @@ fun isAdult(age: Int): Boolean {
     }
 
 
+}
+
+/*Questions on returning done in March 20*/
+/* Convert a string "123" to an integer and store it in a variable.*/
+fun text(word:String):Int{
+    return word.toInt()
+}
+
+/*Write a function reverseString that takes a string as input and returns its reverse.*/
+fun reverseString(name:String):String{
+    val reversedString =( name.reversed())
+    return reversedString
+
+}
+/*Write a function that takes an array of integers as a parameter and print the sum of all the elements.*/
+
+fun words(numbers:Array<Int>){
+    println(numbers.sum())
 }
