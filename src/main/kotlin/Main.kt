@@ -31,13 +31,20 @@ fun main() {
     sphere(20,3.14159)
     isPalindrome("madam,wow,kayak")
 
+//April 2
+var product = Product("rice",140,5.0)
+    product.totalCost()
 
+    var animal =Animal("cat","meew")
+    animal.makeSound()
 
+    var customer = Customer("mkandoe","mkandoeo@mercy","345cd")
+    customer.sendMessage()
 
 
 
 }
-
+// march 19
 //Create a function sum that takes two parameters and returns their sum.
 
 
@@ -63,7 +70,7 @@ fun isAdult(age: Int): Boolean {
 
 }
 
-/*Questions on returning done in March 20*/
+/*Questions on returning done in March 22*/
 /* Convert a string "123" to an integer and store it in a variable.*/
 fun text(word:String):Int{
     return word.toInt()
@@ -81,7 +88,7 @@ fun words(numbers:Array<Int>){
     println(numbers.sum())
 }
 
-
+// 23 March
 //create a function that takes in 4 strings and creates an array out of them then prints out the array.
 fun myFriends(name1:String,name2:String,name3:String,name4:String){
     var friends = arrayOf(name1,name2,name3,name4)
@@ -115,6 +122,7 @@ fun sentence(text:String){
 
     println(text.lowercase().replace("b",""))
 }
+//25 March
 //create a class called Human with these attributes:name,age,weight.it has the following:
 class Human(var name:String,var age:Int,var weight:Double){
     fun eat(foodWeight:Int){
@@ -174,4 +182,30 @@ fun isPalindrome(word:String):Boolean {
     else{
         return false
     }
+}
+//April 2
+//write a Kotlin program that creates a class "product" with properties for name,price,and quantity.Calculate
+//the total cost of the product with a function.
+class Product(var name:String, var price:Int, var quantity:Double) {
+
+    fun totalCost() {
+        var cost = quantity * price
+        println(cost)
+    }
+}
+// Write a Kotlin program that creates a class 'Animal' with properties for name and sound. Include a function
+// to make the animal's sound.
+class Animal(var name :String,var sound:String){
+    fun makeSound(){
+        println("moo moo")
+    }
+}
+//Write a Kotlin program that creates a class 'Customer' with properties for name, email, and address. Include
+// a function to send a welcome email to the customer.
+class Customer(var name:String,var email:String,var address:String){
+    fun sendMessage(){
+        println("welcome $name follow $email at $address to find us")
+    }
+
+
 }
